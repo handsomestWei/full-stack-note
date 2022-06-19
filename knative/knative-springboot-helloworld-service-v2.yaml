@@ -1,0 +1,15 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: knative-springboot-helloworld
+  namespace: default
+spec:
+  runLatest:
+    configuration:
+      ## 使用了revisionTemplate模板，允许配置内容变化时自动推出新版本
+      revisionTemplate:
+        spec:
+          containerConcurrency: 1
+          ## 普通的springboot docker镜像
+          container:
+            image: xxx

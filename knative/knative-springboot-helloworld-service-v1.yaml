@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: knative-springboot-helloworld
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      ## 普通的springboot docker镜像
+      - image: xxx

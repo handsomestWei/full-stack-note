@@ -1,0 +1,20 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: autoscale-go
+  namespace: default
+spec:
+  template:
+    metadata:
+      labels:
+        app: autoscale-go
+      annotations:
+        ## 超过该最大并发数将触发副本扩容
+        autoscaling.knative.dev/target: "10"
+        ## 最少保持1个副本，即使没有流量
+        autoscaling.knative.dev/minScale: "1"
+        ## 副本最大扩容到3个
+        autoscaling.knative.dev/maxScale: "3"        
+    spec:
+      containers:
+        - image: registry.cn-hangzhou.aliyuncs.com/knative-sample/autoscale-go:0.1
