@@ -1,5 +1,5 @@
-# flutter-note
-flutter入门，开发环境搭建。
+# flutter-demo
+flutter入门
 
 ## flutter配置
 [下载](https://github.com/flutter/flutter/releases)，[参考](https://flutterchina.club/setup-windows/)

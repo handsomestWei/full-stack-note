@@ -1,4 +1,4 @@
-# vue-note
+# vue-demo
 vue入门
 
 ### npm安装
