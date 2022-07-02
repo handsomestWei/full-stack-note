@@ -1,4 +1,4 @@
-# pcta-note
+# tidb-pcta-note
 PingCAP TiDB数据库专员PCTA认证学习笔记
 
 ## 体系架构

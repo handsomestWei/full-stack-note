@@ -1,4 +1,4 @@
-# knative-note
+# knative-demo
 [knative-samples](https://github.com/knative/docs/blob/main/docs/samples/serving.md)   
 主要特性：符合条件时自动扩缩容。比如长时间没有流量时副本数自动缩容到0
 
