@@ -1,0 +1,31 @@
+// 指定版本，默认proto2
+syntax="proto3";
+
+// 引入外部的proto对象
+// import "xxx/xxx.proto";
+
+// 生成的包名
+option java_package = "com.wjy.demo.protobuf.dto";
+
+// 生成的类名
+option java_outer_classname = "OrderProto";
+
+// 使用message关键字定义成员，每个变量都有唯一的数字标志。一个文件里可定义多个message
+message Order {
+  int64 id = 1;
+  OrderType orderType = 2;
+  string orderName = 3;
+  int64 userId = 4;
+  repeated string remark = 5; // 重复list
+  map<int32, GoodDetail> goods = 6; // 嵌套对象的map
+}
+
+// 枚举类型
+enum OrderType {
+  TRADE = 0;
+  REFUND = 1;
+}
+
+message GoodDetail {
+  string goodName = 1;
+}
