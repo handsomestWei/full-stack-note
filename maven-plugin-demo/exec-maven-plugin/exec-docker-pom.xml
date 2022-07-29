@@ -1,0 +1,24 @@
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <version>3.0.0</version>
+  <executions>
+    <execution>
+      <phase>install</phase>
+      <goals>
+        <goal>exec</goal>
+      </goals>
+      <configuration>
+        <executable>docker</executable>
+        <arguments>
+          <argument>build</argument>
+          <argument>.</argument>
+          <argument>-t</argument>
+          <argument>pkslow/${project.artifactId}:${project.version}</argument>
+          <argument>-f</argument>
+          <argument>src/main/docker/Dockerfile</argument>
+        </arguments>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
