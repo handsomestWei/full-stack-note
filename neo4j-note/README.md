@@ -26,10 +26,19 @@ java8环境选择下载3.x版本
 /xxx/bin/neo4j.bat console
 访问数据库http://localhost:7474，默认账号密码neo4j
 运行电影的知识图谱例子：在界面输入:play movie graph，按教程创建数据。
+
+沙盒环境https://sandbox.neo4j.com/
 ```
 
-## 整合springboot开发
+## Java开发
 ```
+<!-- 使用官方组件http://neo4j.com.cn/public/docs/chapter4/index.html -->
+<dependency> 
+   <groupId>org.neo4j</groupId> 
+   <artifactId>neo4j</artifactId> 
+   <version>1.8</version> 
+</dependency> 
+
 <!-- jpa方式，利用相关注解 -->
  <dependency>
     <groupId>org.springframework.boot</groupId>
