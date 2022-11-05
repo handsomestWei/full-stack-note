@@ -29,6 +29,9 @@ SRS：空间参照系，SRID：空间参照标识符。在gis数据库定义Geom
 ## 高程模型
 数字高程模型（Digital Elevation Model)，简称DEM，是通过有限的地形高程数据实现对地面地形的数字化模拟。引入高程模型可以更加准确的计算出位置信息。
 
+## POI
+Point of interesting。地图上任何非地理意义的有意义的点：比如商店，医院，车站等。
+
 ## web gis
 ### Shapefile
 在gis软件出现之前，平面文件Shapefile一直是空间数据存储和交互的标准数据格式。
