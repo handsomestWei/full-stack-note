@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wjy.learn.springboot.dao.IUserInfoDao">	
+	<resultMap id="BaseMap" type="com.wjy.learn.springboot.bo.UserInfo">
+	   <id column="user_id" property="userId" jdbcType="INTEGER" />
+	   <result column="user_name" property="userName" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		user_id, user_name
+	</sql>
+	
+	<select id="selectById" resultMap="BaseMap">
+	  SELECT <include refid="Base_Column_List" /> 
+      FROM user_info
+      WHERE user_id= #{userId} 
+	</select>
+	
+	<insert id="insert" parameterType="com.wjy.learn.springboot.bo.UserInfo" useGeneratedKeys="true">
+	  insert into user_info (user_name)
+      values (
+      #{userName}
+      )
+	</insert>
+	
+	<update id="update" parameterType="com.wjy.learn.springboot.bo.UserInfo">
+	  update user_info
+	  <set>
+	   <if test="name != null" >
+           user_name = #{userName},
+       </if>       
+	  </set>
+	  where user_id = #{userId}
+	</update>
+
+</mapper>
