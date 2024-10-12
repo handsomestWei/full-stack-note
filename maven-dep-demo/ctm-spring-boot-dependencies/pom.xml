@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>com.xxx</groupId>
+    <artifactId>ctm-spring-boot-dependencies</artifactId>
+    <version>0.0.1.RELEASE</version>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <name>ctm-spring-boot-dependencies</name>
+
+    <dependencyManagement>
+		<!-- your dependencies -->
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>x.x.x</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>ctm-release</id>
+            <name>ctm-release</name>
+            <url>xxx</url>
+        </repository>
+        <snapshotRepository>
+            <id>ctm-snapshot</id>
+            <name>ctm-snapshot</name>
+            <url>xxx</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
